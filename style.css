@@ -1,0 +1,138 @@
+:root {
+    --custom-blue: #0F284A;
+    --custom-yellow: #FFD602;
+}
+
+#logo {
+    width: 100px;
+    height: auto;
+}
+
+.btn {
+    display: block !important;
+}
+
+aside {
+    color: inherit;
+    background-image: repeating-linear-gradient(
+        54deg,
+        hsla(30.17, 100%, 64.51%, 0.8991524572268665) 5%,
+        hsla(30.31, 83.48%, 45.1%, 0.001529022973908667) 100%
+        ),
+        linear-gradient(
+        347deg,
+        hsla(312.56, 68.25%, 12.35%, 0.07200026542750804) 77%,
+        hsla(280.91, 81.48%, 89.41%, 0.43394103953900975) 88%
+        ),
+        repeating-conic-gradient(
+        from 86deg at 63% 5%,
+        hsla(56.79, 97.04%, 73.53%, 0.04389168822853606) 18%,
+        hsla(0, 0%, 45.88%, 0.5444902710090989) 96%
+        ),
+        repeating-conic-gradient(
+        from 87deg at 9% 35%,
+        hsla(215.51, 83.05%, 88.43%, 0.2966989229960284) 5%,
+        hsla(246.98, 51.81%, 16.27%, 0.5571212297293828) 69%
+        ),
+        repeating-radial-gradient(circle at 33% 98%, #5797f0 48%, #2abb9b 92%);
+    width: auto;
+}
+
+header {
+    color: inherit;
+    background-image: conic-gradient(
+        from 270deg at 15% 89%,
+        hsla(166.76, 63.32%, 44.9%, 0.5279608063870633) 85%,
+        hsla(215, 84%, 80.39%, 0.4039961294318788) 91%
+        ),
+        repeating-conic-gradient(
+        from 64deg at 14% 70%,
+        hsla(313.43, 63.81%, 79.41%, 0.19029026957191597) 26%,
+        hsla(140.45, 65.67%, 73.73%, 0.9879783323671378) 52%
+        ),
+        radial-gradient(
+        ellipse at 42% 67%,
+        hsla(142.13, 64.21%, 62.75%, 0.8132322664370153) 79%,
+        hsla(57.61, 97.1%, 59.41%, 0.8057551741568998) 100%
+        ),
+        repeating-linear-gradient(
+        248deg,
+        hsla(185.34, 66.97%, 42.75%, 0.4875672538976905) 48%,
+        hsla(215.36, 80%, 13.73%, 0.5660174518475285) 69%
+        ),
+        conic-gradient(from 132deg at 70% 78%, #153c1a 86%, #ac0e2e 92%);
+    color: var(--custom-blue);
+    display: flex;
+    align-items: center;
+}
+
+h2 {
+    color: white !important;
+    text-align: center;
+    padding: 16px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    font-size: large;
+    font-family: 'Rubik', sans-serif;
+}
+
+.category {
+    color: white !important; 
+    font-family: 'Rubik', sans-serif !important;
+}
+
+.card {
+    width: clamp(300px, 23%, 500px) !important;
+    height: 100% !important;
+    justify-content: center;
+    align-items: center;
+    margin: 16px 0;
+    /* opacity: 50% !important; */
+}
+
+.card img {
+    opacity: 100% !important;
+}
+
+.card h5 a {
+    text-decoration: none;
+}
+
+#main {
+    display: flex;
+    justify-content: space-evenly;
+}
+/* Gradient Accredited to components.ai */
+main {
+    color: inherit !important;
+    background-image: repeating-conic-gradient(
+        from 116deg at 37% 12%,
+        hsla(240, 7.94%, 12.35%, 0.10098596291569506) 1%,
+        hsla(246, 6.85%, 71.37%, 0.8202168592864969) 34%
+      ),
+      conic-gradient(
+        from 347deg at 41% 10%,
+        hsla(280.26, 82.61%, 81.96%, 0.18099947760856994) 2%,
+        hsla(32.73, 100%, 95.69%, 0.4957813437368115) 73%
+      ),
+      conic-gradient(
+        from 22deg at 5% 84%,
+        hsla(215, 84%, 80.39%, 0.8794275506861235) 63%,
+        hsla(245, 100%, 97.65%, 0.38228879945199234) 85%
+      ),
+      linear-gradient(
+        80deg,
+        hsla(348, 78.95%, 96.27%, 0.08702249858411126) 63%,
+        hsla(113.33, 36%, 4.9%, 0.5297186978825343) 98%
+      ),
+      conic-gradient(from 259deg at 2% 39%, #190b05 3%, #ffc081 44%) !important;
+  }
+
+#menu-btn {
+    width: auto;
+    height: 100%;
+    align-self: center;
+}
