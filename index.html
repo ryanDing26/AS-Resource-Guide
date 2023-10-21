@@ -7,8 +7,6 @@
   <link rel="shortcut icon" href="./assets/as-logo.png" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <!-- Menu Icon -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,35 +17,42 @@
 </head>
 <body>
   <div class="d-flex container-fluid px-0">
+
     <aside>
-      <div class="d-flex flex-column justify-content-center container h-auto m-0 p-16 sticky-top">
-        <h2>Categories</h2>
-        <button type="button" class="btn category basic-needs" onclick="filterCategory('basic-needs')">Basic Needs</button>
-        <button type="button" class="btn category housing" onclick="filterCategory('housing')">Housing</button>
-        <button type="button" class="btn category food" onclick="filterCategory('food')">Food and Nutrition</button>
-        <button type="button" class="btn category wellness text-nowrap" onclick="filterCategory('wellness')">Mental Health and Wellness</button>
-        <button type="button" class="btn category academics" onclick="filterCategory('academics')">Academics</button>
-        <button type="button" class="btn category financial" onclick="filterCategory('financial')">Financial Support</button>
-        <button type="button" class="btn category community" onclick="filterCategory('community')">Community Centers</button>
-        <button type="button" class="btn category legal" onclick="filterCategory('legal')">Legal Support</button>
-        <button type="button" class="btn category transport" onclick="filterCategory('transport')">Transportation</button>
-        <button type="button" class="btn category career" onclick="filterCategory('career')">Career Guidance</button>
-        <button type="button" class="btn category disabilities" onclick="filterCategory('disabilities')">Disabilities</button>
-        <button type="button" class="btn category additional" onclick="filterCategory('additional')">Additional Resources</button>
+      <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="true" tabindex="-1" id="offcanvas" aria-labelledby="sidebar">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title">Categories</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <button type="button" class="btn category basic-needs" onclick="filterCategory('basic-needs')">Basic Needs</button>
+          <button type="button" class="btn category housing" onclick="filterCategory('housing')">Housing</button>
+          <button type="button" class="btn category food" onclick="filterCategory('food')">Food and Nutrition</button>
+          <button type="button" class="btn category wellness text-nowrap" onclick="filterCategory('wellness')">Mental Health and Wellness</button>
+          <button type="button" class="btn category academics" onclick="filterCategory('academics')">Academics</button>
+          <button type="button" class="btn category financial" onclick="filterCategory('financial')">Financial Support</button>
+          <button type="button" class="btn category community" onclick="filterCategory('community')">Community Centers</button>
+          <button type="button" class="btn category legal" onclick="filterCategory('legal')">Legal Support</button>
+          <button type="button" class="btn category transport" onclick="filterCategory('transport')">Transportation</button>
+          <button type="button" class="btn category career" onclick="filterCategory('career')">Career Guidance</button>
+          <button type="button" class="btn category disabilities" onclick="filterCategory('disabilities')">Disabilities</button>
+          <button type="button" class="btn category additional" onclick="filterCategory('additional')">Additional Resources</button>
+        </div>
       </div>
     </aside>
-
+  
     <div class="main-column container-fluid px-0">
       <header>
-          <nav>
-            <div class="d-flex container-fluid sticky-top px-0 vw-75">
-              <button type="button" id="menu-btn" onclick="toggleSidebar()"><span class="material-symbols-outlined">Menu</span></button>
-              <a href="./index.html"><img src="./assets/as-logo.png" alt="AS Logo" id="logo"></a>
-              <div class="title">
-                <h1>Associated Students Resource Guide</h1>
-              </div>
+          <div class="d-flex container-fluid sticky-top px-0 vw-75" id="heading">
+            <button type="button" class="btn"  data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="sidebar">
+              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="100" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+              </svg>
+            </button>
+            <div class="title">
+              <h1><span><a href="./index.html"><img src="./assets/as-logo.png" alt="AS Logo" id="logo"></a></span>Resource Guide</h1>
             </div>
-          </nav>
+          </div>
       </header>
 
       <main>
@@ -55,7 +60,7 @@
 
           <!-- 211 San Diego Info -->
           <div class="card">
-            <img src="./assets/211-logo.png" alt="211 Logo" class="card-img-top">
+            <a href="https://211sandiego.org/" target="_blank"><img src="./assets/211-logo.png" alt="211 Logo" class="card-img-top"></a>
             <div class="card-body">
               <h5 class="card-title">
                 <a href="https://211sandiego.org/" target="_blank">211 San Diego</a>
@@ -111,8 +116,8 @@
                 <a href="https://aip.ucsd.edu/" target="_blank">Academic Internship Program</a>
               </h5>
               <p class="card-text">
-                the AIP program at UCSD helps students find internship and 
-                research opportunities, as well as scholarships and 
+                the Academic Internship Program at UCSD helps students find internship and 
+                research opportunities, as well as scholarship and 
                 community service opportunities.
                 </p>
             </div>  
@@ -149,7 +154,7 @@
                 As the student governing body of UCSD, the AS council advocates
                 on behalf of UC San Diego students, overseeing several 
                 commissions and programs at UCSD, such as Triton Food Pantry 
-                and the Women’s Commission. They also provide funding for 
+                and the Women's Commission. They also provide funding for 
                 student-led events and research.
               </p>
             </div>
@@ -255,9 +260,6 @@
               <p class="card-text">This list of resources includes subsidized child-care options.</p>
             </div>
           </div>
-
-          <!-- Convoy Grocery Shuttle Info -->
-          <div class="card">Convoy Grocery Shuttle</div>
 
           <!-- CAPS Info -->
           <div class="card">
@@ -410,23 +412,107 @@
 
           <!-- Food Allergy Accomodations Info -->
           <div class="card">
-            Food Allergy Accommodations
+            <img src="" alt="" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">
+                <a href="https://hdhdining.ucsd.edu/nutrition-services/dietitian-request.html" target="_blank">
+                  Food Allergy and Dietary Accommodations
+                </a>
+              </h5>
+              <p class="card-text">
+                Students who have food allergies and/or intolerances are 
+                encouraged to submit a Dietitian Consultation Request to food 
+                allergies and other dietary needs.
+              </p>
+            </div>
           </div>
 
-          <div class="card">Graduate and Professional Student Association</div>
-          <div class="card">Guide for Holding Accessible Events</div>
-          <div class="card">Hillcrest Express Shuttle (Medical Shuttle)</div>
-          <div class="card">JAN- Job Accommodation Network</div>
-          <div class="card">List of Black Therapists in San Diego</div>
-          <div class="card">Magnifying San Diego</div>
-          <div class="card">Making the Move to Managing Your Own Personal Assistance Services (PAS)</div>
+          <!-- GPSA Info -->
+          <div class="card">
+            <img src="" alt="" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">
+                <a href="https://gpsa.ucsd.edu/" target="_blank">
+                  Graduate and Professional Student Association
+                </a>
+              </h5>
+              <p class="card-text">
+                The Graduate Student Association (GSA) exists to advocate for 
+                the rights and interests of our diverse community, to provide 
+                for the enjoyment of social, cultural, and service-oriented 
+                events, and for the betterment of academic and non-academic 
+                life of all graduate and professional students at UC San Diego. 
+              </p>
+            </div>
+            <!-- TODO: ACCORDION WITH CONTACT INFO AND RESOURCES SITE -->
+          </div>
+
+          <!-- JAN Info -->
+          <div class="card">
+            <img src="" alt="" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">
+                <a href="https://askjan.org/" target="_blank">
+                  Job Accomodation Network (JAN)
+                </a>
+              </h5>
+              <p class="card-text">
+                The Job Accommodation Network (JAN) provides extensive online 
+                resources and free one-on-one  guidance for anyone (employees 
+                or job seekers) seeking to learn more about their accommodation 
+                rights as persons with disabilities. 
+              </p>
+            </div>  
+          </div>
+
+          <!-- List of Black Therapists Info -->
+          <div class="card">
+            <img src="" alt="" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">
+                <a href="https://sites.google.com/ucsd.edu/magnifyingsandiego/home" target="_blank">
+                  Magnifying San Diego
+                </a>
+              </h5>
+              <p class="card-text">
+                Created by student Jaida Day, the Magnifying San Diego website 
+                highlights Black-owned businesses throughout San Diego, as well 
+                as a variety of resources not included in this guide. Take a 
+                look!              
+              </p>
+            </div>
+            <!-- TODO: Add list of black therapists source -->
+          </div>
+          
+          <!-- PAS Info -->
+          <div class="card">
+            <img src="" alt="" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">
+                <a href="https://pueblo.gpo.gov/CAARNG/ODEP/PDF/ODEP051.pdf" target="_blank">
+                  Making the Move to Managing Your Own Personal Assistance Services (PAS)
+                </a>
+              </h5>
+              <p class="card-text">
+                This amazing resource is intended to help young adults with 
+                disabilities to determine our needs in everyday life, what 
+                tasks are reasonable for us to do, what resources we want to 
+                use, and what kind of assistance we need. This document is a 
+                guided, step-by-step process to make Personal Assistance 
+                Services (PAS), a little-known resource, easier to navigate and 
+                access.
+              </p>
+            </div>
+          </div>
           
           <!-- Mindpath College Health Info -->
           <div class="card">
             <img src="" alt="" class="card-img-top">
             <div class="card-body">
               <h5 class="card-title">
-                <a href="https://acaciacw.com/roots/" target="_blank">Mindpath College Health</a>
+                <a href="https://acaciacw.com/roots/" target="_blank">
+                  Mindpath College Health
+                </a>
               </h5>
               <p class="card-text">
                 Mindpath College Health strives to provide mental health access to all 
@@ -441,9 +527,15 @@
             </div>
           </div>
 
-          <div class="card">Minority Biomedical Research Support Initiative for Maximizing Student Development (IMSD) Program</div>
-          <div class="card">Minority Mental Health Toolkits</div>
-          <div class="card">Nutrition Counseling</div>
+          <div class="card">
+            Minority Biomedical Research Support Initiative for Maximizing Student Development (IMSD) Program
+          </div>
+          <div class="card">
+            Minority Mental Health Toolkits
+          </div>
+          <div class="card">
+            Nutrition Counseling
+          </div>
           <div class="card">Office for Equity, Diversity, and Inclusion</div>
           <div class="card">Office for Prevention of Harassment and Discrimination (OPHD)</div>
           <div class="card">Office for Students with Disabilities (OSD)</div>
@@ -493,6 +585,7 @@
           <div class="card">Triton Food Pantry</div>
           <div class="card">Triton Mobility Services</div>
           <div class="card">Triton Transfers</div>
+          <div class="card">Triton Transit Shuttles</div>
           <div class="card">Tritons Connect</div>
           <div class="card">UC Leadership Excellence through Advanced Degrees (LEADS) Program</div>
           <div class="card">Undergraduate Academic Advising</div>
